@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "steam-user": "*",
-    "steam-totp": "*"
+    "steam-totp": "*",
+    "express": "*"
   }
 }
