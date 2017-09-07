@@ -54,6 +54,7 @@ client.on('error', function(e) {
 	console.log(e);
 });
 
+
 //Verificando pedidos de add e mandando msg de boas vindas!
 client.on('friendRelationship', (steamid, relationship) => {
 
@@ -79,6 +80,19 @@ client.on('friendRelationship', (steamid, relationship) => {
     }
 
 });
+
+// When we get a message, send back a response and log to console
+client.on("friendMessage", function(steamID, message) {
+		console.log("Friend message from " + steamID+ ": " + message);
+		if (message == "Ping") {
+			client.chatMessage(steamID, "Pong");
+			console.log("Send back: Pong");
+		} else {
+			client.chatMessage(steamID, "Send back the standard reply");
+			console.log("Send back the standard reply");
+		}
+});
+
 /*
 client.on('friendsList', function () {
         console.log('Number of friends to send a message to: ' + Object.keys(client.myFriends).length);
@@ -95,14 +109,4 @@ client.on('friendsList', function () {
 		}
 });
 */
-// When we get a message, send back a response and log to console
-client.on("friendMessage", function(steamID, message) {
-		console.log("Friend message from " + steamID+ ": " + message);
-		if (message == "Ping") {
-			client.chatMessage(steamID, "Pong");
-			console.log("Send back: Pong");
-		} else {
-			client.chatMessage(steamID, "Send back the standard reply");
-			console.log("Send back the standard reply");
-		}
-});
+
