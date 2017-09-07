@@ -79,7 +79,7 @@ client.on('friendRelationship', (steamid, relationship) => {
     }
 
 });
-
+/*
 client.on('friendsList', function () {
         console.log('Number of friends to send a message to: ' + Object.keys(client.myFriends).length);
         var count = 0;
@@ -94,7 +94,7 @@ client.on('friendsList', function () {
             }
 		}
 });
-
+*/
 // When we get a message, send back a response and log to console
 client.on("friendMessage", function(steamID, message) {
 		console.log("Friend message from " + steamID+ ": " + message);
