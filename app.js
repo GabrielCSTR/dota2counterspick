@@ -4,7 +4,7 @@ var http = require('http');
 
 
 //bot steam
-//const botsteam = require('./lib/bot_steam');
+const botsteam = require('./lib/bot_steam');
 
 //dados heros
 const hero_dados = require('./lib/heros_data');
@@ -125,7 +125,7 @@ client.on("friendMessage", function(steamID, message) {
 
 	
 
-console.log(hero_dados.GetDadosHero('zeus'));
+//console.log(hero_dados.GetDadosHero('zeus'));
 
 
 
