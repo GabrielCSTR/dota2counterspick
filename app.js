@@ -1,8 +1,13 @@
 var express = require('express');
 var app     = express();
-const SteamUser = require('steam-user');
-const client = new SteamUser();
-//var sleep = require('sleep');
+var http = require('http');
+
+
+//bot steam
+//const botsteam = require('./lib/bot_steam');
+
+//dados heros
+const hero_dados = require('./lib/heros_data');
 
 const logOnOptions = {
 	accountName: 'DR34MH1GH',
@@ -11,11 +16,12 @@ const logOnOptions = {
 	//twoFactorCode: SteamTotp.generateAuthCode('your_steam_shared_secret')
 };
 
+
 //pegando dados do usuario steam
-client.logOn(logOnOptions);
+//client.logOn(logOnOptions);
 
 //fezendo conexao com a steam
-client.on('loggedOn', () => {
+/*client.on('loggedOn', () => {
 
 	console.log("Logged into Steam as " + client.steamID.getSteam3RenderedID());
 
@@ -42,12 +48,12 @@ client.on('loggedOn', () => {
 	"5": "LookingToTrade",
 	"6": "LookingToPlay",
 	"7": "Max",
-	*/
+	
 
 	//status do bot online
 	client.setPersona(SteamUser.Steam.EPersonaState.Online);
 	//status do game  
-	client.gamesPlayed(["Gamer Core League", 440]);
+	client.gamesPlayed(570);
 });
 
 //error na conexao com a steam
@@ -55,10 +61,11 @@ client.on('error', function(e) {
 	// Some error occurred during logon
 	console.log(e);
 });
+*/
 
 
 //Verificando pedidos de add e mandando msg de boas vindas!
-client.on('friendRelationship', (steamid, relationship) => {
+/*client.on('friendRelationship', (steamid, relationship) => {
 
 	/*
 	Listas de status de amigos
@@ -73,28 +80,16 @@ client.on('friendRelationship', (steamid, relationship) => {
 	Ignored = 5,
 	IgnoredFriend = 6,
 	SuggestedFriend = 7
-	*/    
+	
 
 	//verificando se o status atual é invite pendete
 	if (relationship === 2) {
         client.addFriend(steamid);
-        client.chatMessage(steamid, 'Olá NIPS! Eu sou um bot e pelo meus calculos eu vejo que você é noob!');
+        client.chatMessage(steamid, 'Olá eu sou um bot da GC e estou aqui para le mostra os counter pick dos heros Dota2!');
     }
 
 });
-
-// When we get a message, send back a response and log to console
-client.on("friendMessage", function(steamID, message) {
-		console.log("Friend message from " + steamID+ ": " + message);
-		if (message == "Ping") {
-			client.chatMessage(steamID, "Pong");
-			console.log("Send back: Pong");
-		} else {
-			client.chatMessage(steamID, "Send back the standard reply");
-			console.log("Send back the standard reply");
-		}
-});
-
+*/
 /*
 client.on('friendsList', function () {
         console.log('Number of friends to send a message to: ' + Object.keys(client.myFriends).length);
@@ -111,10 +106,31 @@ client.on('friendsList', function () {
 		}
 });
 */
+/*
+// When we get a message, send back a response and log to console
+client.on("friendMessage", function(steamID, message) {
+		console.log("Friend message from " + steamID+ ": " + message);
+		if (message == "Ping") {
+
+			var hid = DotaBuffCP.heroId (22);
+			client.chatMessage(steamID, hid);
+			console.log("Send back: Pong");
+			console.log(DotaBuffCP);
+		} else {
+			client.chatMessage(steamID, "Send back the standard reply");
+			console.log("Send message from " + steamID+ ": ");
+		}
+});
+*/
+
+	
+
+console.log(hero_dados.GetDadosHero('zeus'));
 
 
 
 app.set('port', (process.env.PORT || 5000));
+
 
 //For avoidong Heroku $PORT error
 app.get('/', function(request, response) {

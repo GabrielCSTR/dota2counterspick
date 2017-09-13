@@ -1,7 +1,7 @@
 {
-  "name": "BotSteamGC",
+  "name": "loginapp",
   "version": "1.0.0",
-  "description": "Bot Steam GamerCore League",
+  "description": "Login GamerCore League",
   "author": {
     "name": "Gabriel Carlos",
     "email": "gabrielcarlos91@hotmail.com",
@@ -16,8 +16,27 @@
   },
   "license": "ISC",
   "dependencies": {
-    "steam-user": "*",
-    "steam-totp": "*",
-    "express": "*"
+    "bcryptjs": "*",
+    "request": "^2",
+    "x-ray": "^2",
+    "lodash": "^4",
+    "async": "^1",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "particlesjs": "^2.0.2",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "passport-steam": "^1.0.8",
+    "steam-web": "^0.4.0",
+    "passport-openid": "^0.4.0"
   }
 }
