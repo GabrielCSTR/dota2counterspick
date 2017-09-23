@@ -38,6 +38,7 @@
     "passport-steam": "^1.0.8",
     "steam-web": "^0.4.0",
     "steam-user": "*",
+    "underscore": "*",
     "passport-openid": "^0.4.0"
   }
 }
