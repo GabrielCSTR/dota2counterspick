@@ -17,7 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "*",
-    "steam-user": "*",
     "request": "^2",
     "x-ray": "^2",
     "lodash": "^4",

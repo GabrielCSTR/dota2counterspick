@@ -123,10 +123,8 @@ client.on("friendMessage", function(steamID, message) {
 });
 */
 
-	
 
-//console.log(hero_dados.GetDadosHero('zeus'));
-
+//console.log(hero_dados.getDataHero("anti mage"));
 
 
 app.set('port', (process.env.PORT || 5000));
