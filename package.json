@@ -1,7 +1,7 @@
 {
-  "name": "loginapp",
+  "name": "dota2counterspick",
   "version": "1.0.0",
-  "description": "Login GamerCore League",
+  "description": "Bot steam chat Dota2 Counters pick heros ",
   "author": {
     "name": "Gabriel Carlos",
     "email": "gabrielcarlos91@hotmail.com",
