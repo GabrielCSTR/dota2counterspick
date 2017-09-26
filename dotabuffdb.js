@@ -99,7 +99,6 @@ var getBestCounterPick = function(heroname) {
 			myEmitter.emit('done');
 			
 		}
-
 		
 	})
 
