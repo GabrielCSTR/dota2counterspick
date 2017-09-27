@@ -30,9 +30,24 @@ After that, you may press `Deploy`.
 
 To run Steam bot Dota2 Counters Pick locally, you will need:
 
-* `npm install` in the repository root
+* [NodeJS](https://nodejs.org/en/download/) 6 or above.
+* [git](https://git-scm.com/downloads), so you can easily clone this repo.
+
+Start by cloning this repo, and then install the dependencies. In a command line (if you're on
+Windows and have no idea what that means, open the `Git Bash` program that was installed with git),
+do:
+
+```sh
+$ git clone https://github.com/XxStR/dota2counterspick.git
+$ cd dota2counterspick
+$ npm install
+```
+
 * Copy `config.example.js` to `config.js` and edit appropriately
-* Run the app: `node app`
+
+```sh
+$ npm run app
+```
 
 ## Commands Bot
 * `!dota2 counters < hero name>` - Shows the 10 counterspick of the informed hero.
@@ -51,3 +66,6 @@ Special thanks to:
 
 Thanks!
 
+## License
+
+ISC © [XxStR](https://github.com/XxStR)
