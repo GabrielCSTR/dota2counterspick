@@ -63,6 +63,7 @@ Special thanks to:
 - [Onur](https://github.com/onur)
 - [DotaBuff](https://dotabuff.com)
 - [RichMartel](https://github.com/RichMartel)
+- [MeLlamoPablo](https://github.com/MeLlamoPablo/)
 
 Thanks!
 
